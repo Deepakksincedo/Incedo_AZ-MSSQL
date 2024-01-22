@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Dashboard</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="questionForm">
+        <h2>Ask Question</h2>
+        
+        <form id="trainerQuestionForm">
+            <label for="shortcode">Shortcode:</label><br>
+            <input type="text" id="shortcode" name="shortcode" required><br>
+
+            <label for="question">Question:</label><br>
+            <textarea id="question" name="question" required></textarea><br>
+
+            <label for="answerType">Answer Type:</label><br>
+            <select id="answerType" name="answerType" required onchange="toggleMCQOptions(this.value)">
+                <option value="yes_no">Yes/No</option>
+                <option value="mcq">MCQ</option>
+                <option value="text">Text</option>
+            </select><br>
+
+            <!-- MCQ Options, initially hidden -->
+            <div id="mcqOptions" class="hidden">
+                <label for="option1">Option 1:</label><br>
+                <input type="text" id="option1" name="option1"><br>
+                <label for="option2">Option 2:</label><br>
+                <input type="text" id="option2" name="option2"><br>
+                <label for="option3">Option 3:</label><br>
+                <input type="text" id="option3" name="option3"><br>
+                <label for="option4">Option 4:</label><br>
+                <input type="text" id="option4" name="option4"><br>
+            </div>
+            
+            <button type="submit">Ask</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleMCQOptions(value) {
+            var mcqOptions = document.getElementById('mcqOptions');
+            if (value === 'mcq') {
+                mcqOptions.classList.remove('hidden');
+            } else {
+                mcqOptions.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>

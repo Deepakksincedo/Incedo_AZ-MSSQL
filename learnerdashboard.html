@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner Dashboard</title>
+</head>
+<body>
+
+    <div id="learnerDashboard">
+        <h2>Learner Dashboard</h2>
+
+        <!-- Example of a Yes/No Question -->
+        <div class="question">
+            <p>Question 1: Is HTML a programming language? (Yes/No)</p>
+            <form>
+                <input type="radio" id="yes1" name="answer1" value="yes">
+                <label for="yes1">Yes</label><br>
+                <input type="radio" id="no1" name="answer1" value="no">
+                <label for="no1">No</label><br>
+                <button type="submit">Submit Answer</button>
+            </form>
+        </div>
+
+        <!-- Example of an MCQ Question -->
+        <div class="question">
+            <p>Question 2: What does HTML stand for?</p>
+            <form>
+                <input type="radio" id="option1" name="answer2" value="option1">
+                <label for="option1">Hyper Text Markup Language</label><br>
+                <input type="radio" id="option2" name="answer2" value="option2">
+                <label for="option2">High Text Markup Language</label><br>
+                <input type="radio" id="option3" name="answer2" value="option3">
+                <label for="option3">Hyper Tabular Markup Language</label><br>
+                <button type="submit">Submit Answer</button>
+            </form>
+        </div>
+
+        <!-- Example of a Text Answer Question -->
+        <div class="question">
+            <p>Question 3: Describe the purpose of HTML.</p>
+            <form>
+                <textarea id="textAnswer" name="textAnswer"></textarea><br>
+                <button type="submit">Submit Answer</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

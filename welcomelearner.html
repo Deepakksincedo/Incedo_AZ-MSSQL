@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner Welcome Page</title>
+</head>
+<body>
+
+    <!-- Welcome Form for New Learners -->
+    <div id="welcomeForm">
+        <h2>Welcome, Learner!</h2>
+        <form id="learnerForm">
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName"><br>
+            <button type="submit" id="saveButton">Save</button>
+        </form>
+    </div>
+
+    <!-- Welcome Message for Returning Learners -->
+    <!-- This section will be shown or hidden based on the backend logic -->
+    <div id="welcomeMessage" style="display:none;">
+        <h2>Welcome Back!</h2>
+        <button id="nextButton">Next</button>
+    </div>
+
+</body>
+</html>
